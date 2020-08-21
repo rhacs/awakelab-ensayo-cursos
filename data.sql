@@ -9,5 +9,5 @@ insert into alumno values (4444, 1, 'Daniela Diaz');
 insert into alumno values (5555, 2, 'Eugenia Echeverría');
 insert into alumno values (6666, 2, 'Felipe Fuentes');
 insert into alumno values (7777, 2, 'Gabriela Gómez');
-insert into alumno values (8888, 3, 'HéctorHorta');
-insert into alumno values (9999, 3, 'IvánIsla');
+insert into alumno values (8888, 3, 'Héctor Horta');
+insert into alumno values (9999, 3, 'Iván Isla');
