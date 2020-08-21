@@ -112,7 +112,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return String.format("Alumno [id=%s, nombre=%s]", id, nombre, curso);
+        return String.format("Alumno [id=%s, nombre=%s]", id, nombre);
     }
 
 }
