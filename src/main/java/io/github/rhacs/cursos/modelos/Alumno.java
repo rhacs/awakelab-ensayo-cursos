@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import io.github.rhacs.cursos.Constantes;
 
 @Entity
@@ -34,6 +36,7 @@ public class Alumno {
      */
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = Constantes.CURSO_ID, nullable = false)
+    @JsonIgnore
     private Curso curso;
 
     // Constructores
