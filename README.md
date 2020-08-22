@@ -1,5 +1,7 @@
 # awakelab-ensayo-cursos
 
+Solución a la Simulación #3 del curso FullStack Java de Awakelab 
+
 ## Problema
 
 Una escuela rural posee una base de datos con el registro de las notas de cada curso. Existe solo un curso por nivel, y se almacenan las notas de las evaluaciones que el alumno efectivamente rinde. No se almacena datos históricos, por tanto, el registro es por cada año.
