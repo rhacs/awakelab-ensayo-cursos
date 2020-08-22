@@ -21,6 +21,10 @@
                 <div class="col-md-6 mb-5">
                     <h2 class="pb-2 border-bottom mb-4">Listado de Cursos</h2>
 
+                    <core:if test="${not empty error}">
+                        <div class="alert alert-danger mb-4">${error}</div>
+                    </core:if>
+
                     <div class="table-responsive">
                         <table class="table table-hover table-striped">
                             <thead>
@@ -65,10 +69,27 @@
                                 </tr>
                             </thead>
 
-                            <tbody id="alumnos">
-                                <tr>
-                                    <th scope="row" colspan="2" class="text-center">Seleccione un Curso</th>
-                                </tr>
+                            <tbody>
+                                <core:choose>
+                                    <core:when test="${alumnos != null && alumnos.size() > 0}">
+                                        <core:forEach items="${alumnos}" var="alumno">
+                                            <tr>
+                                                <th scope="row" class="text-nowrap">${alumno.getId()}</th>
+                                                <td>${alumno.getNombre()}</td>
+                                            </tr>
+                                        </core:forEach>
+                                    </core:when>
+                                    <core:when test="${alumnos.size() == 0}">
+                                        <tr>
+                                            <th scope="row" colspan="2" class="text-center">No hay registros para el Curso seleccionado</th>
+                                        </tr>
+                                    </core:when>
+                                    <core:otherwise>
+                                        <tr>
+                                            <th scope="row" colspan="2" class="text-center">Seleccione un Curso</th>
+                                        </tr>
+                                    </core:otherwise>
+                                </core:choose>
                             </tbody>
                         </table>
                     </div>
